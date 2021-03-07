@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Franchise</title>
+	<link rel = "icon" href="https://www.enrolmentdesk.com/components/com_mijoshop/opencart/image/cache/data/abc/1mine-500x500.jpg" 
+        type = "image/x-icon">
+
+  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+		<!-- <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@30;400&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+	body,h4,h5{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin:0;
+	}
+	 .navbar {
+     font-family: 'Playfair Display', serif;
+     overflow: hidden;
+     background-color: skyblue;
+     position: fixed;
+     color: black;
+     text-align: center;
+     top: 0;
+     width: 100%;
+     font-size: 50px;
+     /*font-weight: 900;*/
+     border-radius: 0px;
+     z-index: 1100;
+     margin-bottom: 0px;
+     }
+
+     .navbar a {
+     /* float: left;*/
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     /* padding: 14px 16px;*/
+     text-decoration: none;
+     /*z-index: 11;*/
+     /*font-size: 17px;*/
+     }
+
+     .navbar a:hover {
+     background: black;
+     color: white;
+     z-index: 11;
+     }
+
+
+.containerimg {
+  border-radius: 0px;
+  padding-top: 05px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  border-radius: 0px;
+  padding-top: 05px;
+  padding-left: 25%;
+  padding-right: 20%;
+}
+
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ .footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 10px;
+   background-color: black;
+   color: white;
+   text-align: center;
+   /*  z-index: 100;*/
+   }
+
+  .btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  /*position: absolute;*/
+/*  color: black;*/
+  /*margin-left: 40%;
+  margin-right: 50%;*/
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* Green */
+.viewmore {
+  border-color: rgb(210, 47, 37);
+  color: rgb(210, 47, 37);
+}
+
+.viewmore:hover {
+  background-color: rgba(210, 47, 37);
+  color: white;
+}
+
+   form {
+  margin: 2em 0;
+}
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+ 
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  text-transform: ;
+  letter-spacing: 0.05em;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label {
+  /*cursor: text;*/
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">Mine Kids Pre-School & Creche</div>
+  <div>
+      <a href="Mine Kids.html">
+     <img style="position: fixed; top: 80px; left: 10px; width: 200px;" src="Images/mine kids logo.png">
+     </a> 
+    </div>
+
+<h4 style="text-align: center; color: blue; padding-top:110px; padding-bottom: 30px; font-size: 34px; font-weight: 700; background-color: darkblue; color: white;">
+FRANCHISE</h4>
+
+<div class="containerimg">
+ <div style="text-align: justify;padding-top: 20px;padding-left: 20px; padding-right: 20px;">
+  <h4 style="font-size: 21px;">Franchise Opportunity // Partnering success</h4>
+   <p style="font-size: 18px;">In order to start the Mine Kids preschool the first & basic requirement is that the partner should love kids and have a passion to do this business with a long term vision. We at  Mine Kids believe that alliances are an integral part of contemporary strategic businesses. We always look out for good business partners who can share our vision, articulate it, passionately own our vision, and relentlessly drive it to completion.</p> 
+</div>
+</div>
+
+<div class="containerimg">
+ <div style="text-align: justify;padding-top: 20px;padding-left: 20px; padding-right: 20px;">
+  <h4 style="font-size: 21px;">About Mine Kids</h4>
+   <p style="font-size: 18px;">The journey of  Mine Kids began in 2018 with its first branch at Baramunda, Bhubaneswar. From then on,  Mine Kids became the trendsetter for preschool education.  Mine Kids remains the only preschool with a research and development department. All the teachers undergo rigorous training and are continuously educated about new revelations in child psychology.</p> 
+</div>
+</div>
+
+<div class="containerimg">
+ <div style="text-align: justify;padding-top: 20px;padding-left: 20px; padding-right: 20px;">
+  <h4 style="font-size: 21px;">About S D Group of Education</h4>
+   <p style="font-size: 18px;">In order to start the Mine Kids preschool the first & basic requirement is that the partner should love kids and have a passion to do this business with a long term vision. We at  Mine Kids believe that alliances are an integral part of contemporary strategic businesses. We always look out for good business partners who can share our vision, articulate it, passionately own our vision, and relentlessly drive it to completion.</p> 
+</div>
+</div>
+
+<div class="containerimg">
+ <div style="text-align: justify;padding-top: 20px;padding-left: 20px; padding-right: 20px;">
+  <h4 style="font-size: 21px;">Who Can Start</h4>
+   <p style="font-size: 18px;">We are looking for partners who love kids and have a passion to do this business with a long-term vision. In order to start the Mine Kids school, the first and basic requirement is that the partner should love kids and have a passion to do this business with a long term vision. Along with that you should own an area between 1500 sq ft – 10000 sq. ft. With an investment capacity ranging between Rs. 5 lakh to Rs. 15 lakh depending upon the area and location.</p> 
+</div>
+</div>
+
+<div class="containerimg">
+ <div style="text-align: justify;padding-top: 20px;padding-left: 20px; padding-right: 20px;">
+  <h4 style="font-size: 21px;">Why Mine Kids</h4>
+   <ul style="font-size: 18px;">
+   <li>One of the strongest brands of preschools with the maximum recall among parents</li>
+   <li>Worldwide recognition. We are the only pre-school in India to have won a Gold Cannes.</li>
+   <li>The only preschool with a research and development department to develop and update our child centric curriculum</li>
+   <li>Focus on teacher training and recruiting of best talent</li>
+   </ul> 
+</div>
+</div>
+
+ <div class="container">
+  <div style="text-align:center">
+    <h2>Partner with us</h2>
+    <p style="font-size: 21px;">If you share our passion and want to be a part of our growth story, get in touch with us.</p>
+  </div>
+      
+  <form action="">
+
+  <div class="field">
+    <input type="text" name="fullname" id="fullname" placeholder="Name">
+    <label for="fullname">Name</label>
+  </div>
+  
+  <div class="field">
+    <input type="text" name="mobileno" id="mobileno" placeholder="Mobile No">
+    <label for="mobileno">Mobile No</label>
+  </div>
+
+   <div class="field">
+    <input type="email" name="email" id="email" placeholder="Email">
+    <label for="email">Email</label>
+   </div>
+
+   <div class="field">
+   <textarea  style="padding-top: 7px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px;" id="message" name="message" rows="4" cols="50" placeholder="Message">
+   </textarea>
+   <label style="font-size: 21px;">Message</label>
+   
+   </div> 
+
+   <br>
+   <button class="btn viewmore">Send</button>
+
+  </form>
+
+</div>
+
+<div class="footer">
+  <h5>Copyright © 2020 Mine Kids Preschool - All Rights Reserved.</h5>
+ </div>
+
+</body>
+</html>

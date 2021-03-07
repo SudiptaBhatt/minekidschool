@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Classes</title>
+	<link rel = "icon" href="https://www.enrolmentdesk.com/components/com_mijoshop/opencart/image/cache/data/abc/1mine-500x500.jpg" 
+        type = "image/x-icon">
+
+          <!--For social media buttons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+		<!-- <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+	body,h4,h5{
+			font-family: 'Source Sans Pro', sans-serif;
+/*      font-family: 'Courier Prime', monospace;*/
+			margin:0;
+		}
+		/*Topbar style*/
+     .navbar {
+     font-family: 'Playfair Display', serif;
+     overflow: hidden;
+     background-color: skyblue;
+     position: fixed;
+     color: black;
+     text-align: center;
+     top: 0;
+     width: 100%;
+     font-size: 50px;
+     /*font-weight: 900;*/
+     border-radius: 0px;
+     z-index: 1100;
+     margin-bottom: 0px;
+     }
+
+     .navbar a {
+     /* float: left;*/
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     /* padding: 14px 16px;*/
+     text-decoration: none;
+     /*z-index: 11;*/
+     /*font-size: 17px;*/
+     }
+
+     .navbar a:hover {
+     background: black;
+     color: white;
+     z-index: 11;
+     }
+
+.containerimg {
+  border-radius: 0px;
+  padding: 20px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+  .onClickTextOverImage{
+ /* width:200px;
+  height:200px;*/
+  /*background-size:cover;*/
+/*  display:inline-block;*/
+  /*border-radius:16px;
+  margin:4px;
+  box-shadow:0 0 16px rgba(0,0,0,0.5);
+  cursor:pointer;*/
+  position:relative;
+}
+
+.onClickTextOverImage div{
+  position:absolute;
+  color:#fff;
+/*  padding:8px;*/
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-color:rgba(0,0,0,0.5);
+ /* border-radius:16px;*/
+  /*padding-top:0%;*/
+  text-align:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+}
+
+.onClickTextOverImage.show div{
+  opacity:1;
+  padding-top:10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  visibility:visible;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+  .btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  /*position: absolute;*/
+/*  color: black;*/
+  /*margin-left: 40%;
+  margin-right: 50%;*/
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* Green */
+.viewmore {
+  border-color: rgb(210, 47, 37);
+  color: rgb(210, 47, 37);
+}
+
+.viewmore:hover {
+  background-color: rgba(210, 47, 37);
+  color: white;
+}
+
+ .footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 10px;
+   background-color: black;
+   color: white;
+   text-align: center;
+   /*  z-index: 100;*/
+   }
+
+.container2 {
+  position: relative;
+  font-family: Arial;
+}
+
+#slider {
+    height:350px;
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+    background:#CCC;
+}
+
+.slide {
+    height:350px;
+    float:left;
+    text-align:center;
+    padding: 0px;
+    border:1PX SOLID #000;
+  line-height:8em;
+  font-size:40px;
+}
+
+.container {
+  border-radius: 0px;
+  padding-top: 05px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+form {
+  margin: 2em 0;
+}
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+ 
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  text-transform: ;
+  letter-spacing: 0.05em;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label {
+  /*cursor: text;*/
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    //you can set this, as long as it's not greater than the slides length
+    var show = 3;
+    var w = $('#slider').width() / show;
+    var l = $('.slide').length;
+    
+    $('.slide').width(w);
+    $('#slide-container').width(w * l)
+    
+    function slider() {
+        $('.slide:first-child').animate({
+            marginLeft: -w
+        }, 'slow', function () {
+            $(this).appendTo($(this).parent()).css({marginLeft: 0});
+        });
+    }
+    var timer = setInterval(slider, 2000);
+    
+    $('#slider').hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(slider, 2000);
+    });
+});
+</script>
+
+</head>
+<body>
+	<div class="navbar">Mine Kids Pre-School & Creche</div>
+  <div>
+      <a href="Mine Kids.html">
+     <img style="position: fixed; top: 80px; left: 10px; width: 200px;" src="Images/mine kids logo.png">
+     </a> 
+    </div>
+
+<div class="containerimg" style="background-color: rgb(210, 47, 37);">
+<h4 style="color: white; text-align: center; font-weight: 700; font-size: 22px; padding-top: 120px;">
+  BHUBANESWAR'S MOST LOVED & AWARDED PRESCHOOL NOW BEGINS ITS ONLINE CLASSES,<br> 
+  WITH THE AIM TO ENSURE THE HOLISTIC DEVELOPMENT OF STUDENTS.<br><br>
+</h4>
+
+   <div id="slider">
+    <div id="slide-container">
+         <!-- Slider -->
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02%20(1).jpg/:/rs=w:600,m,cg:true" alt="1" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/01.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,m,cg:true" alt="2" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/03%20(1).jpg/:/rs=w:600,m,cg:true" alt="3" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/04%20(1).jpg/:/rs=w:600,m,cg:true" alt="4" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/01%20(1).jpg/:/rs=w:600,m,cg:true" alt="5" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/04%20(2).jpg/:/rs=w:600,m,cg:true" alt="6" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/03.jpg/:/rs=w:600,m,cg:true" alt="7" />
+          </div>
+          <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/04.jpg/:/rs=w:600,m,cg:true" alt="8" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/03%20(2).jpg/:/rs=w:600,m,cg:true" alt="9" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02.jpg/:/rs=w:600,m,cg:true" alt="10" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/01%20(3).jpg/:/rs=w:600,m,cg:true" alt="11" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/04%20(3).jpg/:/rs=w:600,m,cg:true" alt="12" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/03%20(3).jpg/:/rs=w:600,m,cg:true" alt="13" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02%20(3).jpg/:/rs=w:600,m,cg:true" alt="14" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/01%20(2).jpg/:/rs=w:600,m,cg:true" alt="15" />
+          </div>
+           <div class="slide">
+            <img style="height: 100%; max-width: 100%" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02%20(2).jpg/:/rs=w:600,m,cg:true" alt="16" />
+          </div>
+
+         <!-- control arrows -->
+        <div class="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </div>
+        <div class="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+<div class="containerimg">
+  <h4 style="text-align: center; font-weight: 700; font-size: 22px; padding-top: 0px;">
+   ONLINE CLASSES AT MINE KIDS
+ </h4>
+    <div style="text-align: justify; padding-top: 20px; padding-left: 10%; padding-right: 10%; font-size: 18px;">
+    We are all witnessing an unprecedented challenge posed by the global outbreak of COVID-19 Pandemic. As the world hunkers down to halt the spread of the virus, it's also essential that we do not let the Pandemic act as a barrier to the learning process of the little ones.
+
+    In line with this view, the academic team of Mine Kids Bhubaneswar has come up with a special Program of Online Classes for the session 2020-21, with prime focus on the Holistic Development of the children. Our Online Playschool Program includes two classes daily with a duration of 40 minutes each. Our daily classes are a healthy amalgamation of conceptual and co-curricular activities, fostering the overall development of the tiny tots. 
+   </div>
+</div>
+
+<div class="containerimg" style="background-color: rgb(210, 47, 37);">
+ <h4 style="color: white; text-align: center; font-weight: 700; font-size: 22px; padding-top: 0px;">Online Classes Routine<br>
+ </h4>
+<div class="row" style="padding-left: 10%; padding-right: 10%;">
+  <div class="column">
+    <h4 style="color: white;">Concept Based Learning</h4>
+    <div style="color: white; text-align: justify; padding-top: 20px; font-size: 18px;">
+     Our scientifically planned curriculum is designed, keeping in mind an integrated approach and age-wise milestones, to systematically cover all major concepts like:
+     <ul style="color: white; font-size: 18px;">
+       <li>Body Parts</li>
+       <li>My Family</li>
+       <li>Fruits</li>
+       <li>Vegetables</li>
+       <li>Colours</li>
+       <li>Helpers</li>
+       <li>Alphabets</li>
+       <li>Numbers</li>
+       <li>Positional & Spatial concepts</li>
+       <li>Transport</li>
+     </ul>
+  </div>
+</div>
+  <div class="column">
+    <h4 style="color: white;">Co-Curricular Activities</h4>
+     <div style="color: white; text-align: justify; padding-top: 20px; font-size: 18px;">
+      A wide variety of Co-curricular activities contribute to the overall development of the children while making their experience of online classes an enjoyable one. Our curriculum offers a great blend of activities that cater to all the domains of development in the little ones:
+      <ul style="color: white; font-size: 18px;">
+       <li>Yoga / Taekwondo</li>
+       <li>Story Narration</li>
+       <li>Creative Hands</li>
+       <li>Dance</li>
+       <li>Celebration</li>
+       <li>Event</li>
+     </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="containerimg" style="padding-left: 10%; padding-right: 10%;">
+    <h4 style="text-align: center; font-weight: 700; font-size: 22px; padding-top: 0px;">“THE MIRACLE YEAR”<br>
+    </h4>
+    <div style="text-align: justify; padding-top: 20px; padding-left: 20px; padding-right: 20px; font-size: 18px;">
+    <p style="font-style: italic; font-size: 18px;">The mental and physical growth of children is believed to be the most rapid between 2 to 4 years by experts.</p>
+
+    At Mine Kids, we certainly know that the formative years of a child’s life are of utmost importance for development, which is why, our child-centric approach ensures the perfect holistic development at this tender age.
+
+    With our scientifically designed curriculum and innovative teaching practices, the Online Classes at Mine Kids prepare children for life by imparting not only age-appropriate knowledge but also enhancing their talents and empowering them with life skills to ensure their overall development that includes:
+  </div>
+</div>
+
+   <div class="container" style="background-color: rgb(210, 47, 37); padding-left: 10%; padding-right: 10%;">
+  <div style="text-align:center">
+  </div>
+  <div class="row">
+    <div class="column">
+       <h4 style="color: white; font-size: 22px; font-weight: 700;">Intellectual Development</h4>
+       <p style="color: white; text-align: justify; font-size: 18px;"> The IQ of a child just doesn't depend on the genes alone, but the opportunities he/she gets to use his/her mind. Our Online Classes offer the best opportunities to stimulate intellectual curiosity in the little ones so as to help them understand the world around them. We organise theme based activities where the toddlers learn about the monthly theme & concepts such as:</p>
+       <ul style="color: white; font-size: 18px;">
+       <li>People Around Us</li>
+       <li>Community Helpers</li>
+       <li>My Family</li>
+       <li>Fruits & Vegetables</li>
+       <li>Shapes</li>
+       <li>Numbers</li>
+       <li>Vehicles Around Us</li>
+      </ul>
+    </div>
+     <div class="column">
+      <img style="max-width: 100%;" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,h:860,cg:true,m/cr=w:740,h:860,ax:50%25,ay:50%25">
+    </div>
+  </div>
+</div>
+
+  <div class="container" style="padding-left: 10%; padding-right: 10%;">
+  <div style="text-align:center">
+  </div>
+  <div class="row">
+    <div class="column">
+   <img style="max-width: 100%;" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/01%20(2).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,h:600,cg:true,m/cr=w:740,h:600,ax:50%25,ay:50%25">
+    </div>
+    <div class="column">
+      <h4 style="font-size: 22px; font-weight: 700;">Physical Development</h4>
+       <p style="text-align: justify; font-size: 18px;"> The childhood of every child should be no less than a carnival of good memories, love and enjoyment and our Online Classes ensure they get ample opportunities to run, play and simply be themselves! Natural growth occurs best when children have lots of fun. And, all that fun happens at our: </p>
+       <ul style="font-size: 18px;">
+       <li>Dance Class</li>
+       <li>Yoga Class</li>
+       </ul>
+    </div>
+  </div>
+</div>
+
+   <div class="container" style="background-color: rgb(210, 47, 37); padding-left: 10%; padding-right: 10%;">
+  <div style="text-align:center">
+  </div>
+  <div class="row">
+    <div class="column">
+       <h4 style="color: white; font-size: 22px; font-weight: 700;">Language Development</h4>
+       <p style="color: white; text-align: justify; font-size: 18px;">What good is knowledge that cannot be expressed! Language learning provides the foundation for all later learning. By the time children enter preschool, they are already using a language at home. Our Online Classes provide them with the right activities like rhymes recitation and story narration to increase their vocabulary steadily and rapidly. We focus on all aspects of language learning, namely:</p>
+      <ul style="color: white; font-size: 18px;">
+      <li>Listening</li> 
+      <li>Speaking</li>
+      <li>Reading</li> 
+      <li>Writing</li>
+      <li>Oral Expression</li>
+      </ul>
+    </div>
+     <div class="column">
+   <img style="max-width: 100%;" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02%20(3).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,h:860,cg:true,m/cr=w:740,h:860,ax:50%25,ay:50%25">
+    </div>
+  </div>
+</div>
+
+  <div class="container" style="padding-left: 10%; padding-right: 10%;">
+  <div style="text-align:center">
+  </div>
+  <div class="row">
+   <div class="column">
+  <img style="max-width: 100%;" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02%20(1).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,h:780,cg:true,m/cr=w:740,h:780,ax:50%25,ay:50%25">
+    </div>
+    <div class="column">
+       <h4 style="font-size: 22px; font-weight: 700;">Development of Creative Expression</h4>
+       <p style="text-align: justify; font-size: 18px;">Each child has inborn creativity. All we need to do is give them encouragement and opportunities for free play, particularly dramatic and constructive play which will foster creativity in them. We provide children with stimulating experiences by arranging different types of online activities where they can nurture their imagination & discover their talents like:</p>
+       <ul style="font-size: 18px;">
+      <li>Dancing</li> 
+      <li>Art & craft</li>
+      <li>Clay Modelling</li> 
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="container" style="background-color: rgb(210, 47, 37); padding-left: 10%; padding-right: 10%;">
+  <div style="text-align:center">
+  </div>
+  <div class="row">
+    <div class="column">
+    <h4 style="color: white; font-size: 22px; font-weight: 700;">Socio-Emotional Development</h4>
+     <p style="color: white; text-align: justify; font-size: 18px;">Each child has his/her own unique ‘Personality’ which is the outcome of inheritance, social/cultural groups, different sorts of interactions, regular appreciation and exposure. Our Online Classes provide the right kind of experience, which forms the learning ground for the child about right behaviour, friendship, & sharing.</p>
+    </div>
+     <div class="column">
+   <img style="max-width: 100%;" src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/02%20(4).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,h:520,cg:true,m/cr=w:740,h:520,ax:50%25,ay:50%25">
+    </div>
+  </div>
+</div>
+
+  <div class="containerimg" style="padding-left: 10%; padding-right: 10%;">
+<div class="row">
+  <div class="column">
+    <h4 style="font-size: 21px;">CELEBRATIONS</h4>
+    <img src="https://isteam.wsimg.com/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/2%20(4).jpg/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300" alt="prog1" 
+    style="width:100%">
+    <div style="text-align: justify;padding-top: 20px; font-size: 18px;">
+       Building an understanding of the cultures and traditions at such a tender age will certainly leave imprints of patriotism in their hearts forever. We love celebrating each festival with immense joy. Be it Independence Day, Earth Day, Janmashtami, Baisakhi, Diwali, Holi, Eid or Christmas. 
+  </div>
+</div>
+  <div class="column">
+    <h4 style="font-size: 21px;">BIRTHDAY BASHES</h4>
+    <img src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/Childrens-birthday-party-clown.jpg/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300" alt="prog2" style="width:100%">
+     <div style="text-align: justify;padding-top: 20px; font-size: 18px;">
+      Birthday celebrations are the perfect source of boosting the positive self-concept of the children. We organize a special Virtual Birthday Party for our tiny tots to make their birthday celebrations memorable with fun activities like, House Hunt, Simon Says, Guess the Sounds, etc.
+   </div>
+  </div>
+</div>
+</div>
+
+  <div class="containerimg" style="background-color: rgba(210, 47, 37); padding-left: 10%; padding-right: 10%;">
+<div class="row">
+  <div class="column">
+    <img src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/04%20(3).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:560,h:300,cg:true,m/cr=w:560,h:300,ax:49.562003832466466%25,ay:27.391304347826086%25" alt="smiley1" 
+    style="width:100%">
+    <div style="text-align: justify;padding-top: 20px; font-size: 18px;">
+       <h4 style=" padding-left: 20px; color: white;">Age Group</h4>
+    <ul style=" color: white;">
+      <li>Play Group: 2+</li>
+      <li>Nursery: 3+</li>
+      <li>Prep: 4+ </li>
+    </ul>
+  </div>
+</div>
+  <div class="column">
+    <img src="https://img1.wsimg.com/isteam/ip/fe3aa5b9-d3c8-4419-afa7-273279244656/03%20(3).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:560,h:300,cg:true,m/cr=w:560,h:300,ax:47.81001916233233%25,ay:33.47826086956522%25" alt="smiley2" style="width:100%">
+     <div style="text-align: justify;padding-top: 20px; font-size: 18px;">
+      <h4 style=" padding-left: 0px; color: white;">Fees of The Program</h4>
+    <p style=" text-align: justify; color: white;">
+    The monthly fees for Session 2020-21 is Rs. 1500/-,<br>
+    Book set will be charged separately. Courier charges <br>
+    will be extra. </p>
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div style="text-align:center">
+    <!-- <h2>Partner with us</h2> -->
+    <p style="font-size: 21px;">Quick Contact</p>
+  </div>
+      
+  <form action="">
+
+  <div class="field">
+    <input type="text" name="fullname" id="fullname" placeholder="Name">
+    <label for="fullname">Name</label>
+  </div>
+  
+   <div class="field">
+    <input type="email" name="email" id="email" placeholder="Email">
+    <label for="email">Email</label>
+   </div>
+
+   <div class="field">
+    <input type="text" name="phone" id="phone" placeholder="Phone">
+    <label for="phone">Phone</label>
+   </div>
+
+   <div class="field">
+    <input type="address" name="address" id="address" placeholder="Address">
+    <label for="address">Address</label>
+   </div>
+
+   <div class="field">
+   <textarea  style="padding-top: 7px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px;" id="interested" name="interestes" rows="4" 
+   cols="50" placeholder="I'm interested in">
+   </textarea>
+   <label style="font-size: 21px;">I'm interested in</label>
+   </div> 
+
+   <div class="field">
+   <textarea  style="padding-top: 7px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px;" id="notes" name="notes" rows="4" cols="50" placeholder="Other Notes">
+   </textarea>
+   <label style="font-size: 21px;">Other Notes</label>
+   </div> 
+
+   <br>
+   <button class="btn viewmore">Send</button>
+
+  </form>
+</div>
+
+
+<div class="footer">
+  <h5>Copyright © 2020 Mine Kids Preschool - All Rights Reserved.</h5>
+ </div>
+
+</body>
+</html>

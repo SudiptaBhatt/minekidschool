@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+   <link rel = "icon" href="https://www.enrolmentdesk.com/components/com_mijoshop/opencart/image/cache/data/abc/1mine-500x500.jpg" 
+        type = "image/x-icon">
+
+          <!--For social media buttons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style type="text/css">
+
+   button
+      {
+        background-color: darkgreen;
+        color: white;
+        border-radius: 8px;
+      }
+      button:hover
+      {
+        background-color: green;
+      }
+     #readBtn1
+    {
+       left: 20px;
+       position: relative;
+       padding: 10px;
+    }
+     #readBtn2
+    {
+       left: 20px;
+       position: relative;
+       padding: 10px;
+    }
+
+  body{
+      font-family: 'Source Sans Pro', sans-serif;
+      /*font-family: 'Courier Prime', monospace;*/
+      margin:0;
+      color: black;
+      ;
+    }
+    h1,h4,h5
+    {
+      font-family: 'Source Sans Pro', sans-serif;
+      /*font-family: 'Courier Prime', monospace;*/
+    }
+    ul{
+      font-size: 18px;
+    }
+    h4{
+      /*padding-left: 20px;*/
+    }
+    p{
+      padding-left: 20px;
+      font-size: 18px;
+      text-align: justify;
+      text-justify: inter-word;
+      padding-right: 20px;
+    }
+    h5{
+      padding-left: 20px;
+      text-align: justify;
+      text-justify: inter-word;
+      padding-right: 20px;
+    }
+
+    strong{
+      padding-left: 20px;
+    }
+
+   .navbar {
+     font-family: 'Playfair Display', serif;
+     overflow: hidden;
+     background-color: skyblue;
+     position: fixed;
+     color: black;
+     text-align: center;
+     top: 0;
+     width: 100%;
+     font-size: 50px;
+     /*font-weight: 900;*/
+     border-radius: 0px;
+     z-index: 1100;
+     margin-bottom: 0px;
+     }
+
+     .navbar a {
+     /* float: left;*/
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     /* padding: 14px 16px;*/
+     text-decoration: none;
+     /*z-index: 11;*/
+     /*font-size: 17px;*/
+     }
+
+     .navbar a:hover {
+     background: black;
+     color: white;
+     z-index: 11;
+     }
+
+.main {
+  /* padding: 16px;*/
+  padding-top: 50px;
+  height: 100%; /* Used in this example to enable scrolling */
+}
+  .img-container{
+    text-align: center;
+  }
+
+ .footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 10px;
+   background-color: black;
+   color: white;
+   text-align: center;
+   /*  z-index: 100;*/
+   }
+   .fa:hover {
+    opacity: 0.7;
+    }
+   /*Social Media Buttons */
+   .fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+/*.fa:hover {
+    opacity: 0.7;
+}*/
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+/*.fa-instagram {
+  background: #125688;
+  color: white;
+}*/
+.fa-whatsapp{
+  background:darkgreen;
+  color:lightgreen;
+}
+
+/*.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+}
+*/
+.containerimg {
+  border-radius: 5px;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.container {
+/*  border-radius: 5px;*/
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  /*position: absolute;*/
+/*  color: black;*/
+  /*margin-left: 40%;
+  margin-right: 50%;*/
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.btn2 {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  /*position: absolute;*/
+/*  color: black;*/
+  margin-left: 40%;
+  padding: 14px 28px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Green */
+.viewmore {
+  border-color: rgb(210, 47, 37);
+  color: rgb(210, 47, 37);
+}
+
+.viewmore:hover {
+  background-color: rgba(210, 47, 37);
+  color: white;
+}
+
+   form {
+  margin: 2em 0;
+}
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+ 
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  text-transform: ;
+  letter-spacing: 0.05em;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label {
+  /*cursor: text;*/
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+ <!--  <header> -->
+<div class="navbar">Mine Kids Pre-School & Creche</div>
+    <div>
+      <a href="Mine Kids.html">
+     <img style="position: fixed; top: 80px; left: 10px; width: 200px;" src="Images/mine kids logo.png">
+     </a> 
+    </div>
+
+  <h4 style="padding-top: 100px; padding-bottom: 40px; text-align: center; font-size: 26px; font-weight: 700; background-color: darkblue; color: white;"><b>CONTACT US</b>
+  </h4>
+
+  <div>
+    <h2 style="text-align: center;">Keep In Touch</h2>
+    <p style="font-size: 21px; text-align: center;">We love our customers, so feel free to visit during normal business hours.</p>
+  </div>
+
+   <div class="container">
+  <div class="row">
+    <div class="column">
+     <h4 style="font-size: 21px;"><b>PLACE / LOCATION</b></h4>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.4744491823085!2d85.7905287146347!3d20.280619686408386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190827563ae50b%3A0xa635de87d04d9ab6!2sMine%20Kids%20Preschool%20%26%20Creche!5e0!3m2!1sen!2sin!4v1596538506060!5m2!1sen!2sin" width="470" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+      <h4 style="color: black;">
+      <b>VISIT US</b><br>
+      <!-- Center Details:<br> -->
+      MINE KIDS PRESCHOOL<br>
+      MDL-7, Shanti Vihar,<br> 
+      Housing Board Colony Baramunda, Bhubaneswar <br>
+      Pin - 751003. Mob: 8917327419, +91 83380 26545<br>
+      <br>
+      <b>FOLLOW US</b><br>
+      <a style="" href="https://www.facebook.com/minekidsbaramunda/" class="fa fa-facebook"></a>
+      <a style="" class="fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=918338026545&text=&source=&data=&app_absent="></a>
+      </h4>
+    </div>
+
+        <div class="column">
+      
+  <form action="">
+
+  <div class="field">
+    <input type="text" name="fullname" id="fullname" placeholder="Name">
+    <label for="fullname">Name</label>
+  </div>
+  
+  <div class="field">
+    <input type="text" name="mobileno" id="mobileno" placeholder="Mobile No">
+    <label for="mobileno">Mobile No</label>
+  </div>
+
+   <div class="field">
+    <input type="email" name="email" id="email" placeholder="Email">
+    <label for="email">Email</label>
+   </div>
+
+   <div class="field">
+   <textarea  style="padding-top: 7px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px;" id="message" name="message" rows="4" cols="50" placeholder="Message">
+   </textarea>
+   <label style="font-size: 21px;">Message</label>
+   
+   </div> 
+
+   <br>
+   <button class="btn viewmore">Send</button>
+
+  </form>
+
+</div>
+
+  </div>
+</div>
+
+ <h4 style="padding-top: 10px; text-align: center; font-size: 26px; font-weight: 700;"><b>Careers</b></h4>
+
+ <div class="containerimg">
+<div class="row">
+  <div class="column">
+    <h4 style="font-size: 25px;">Vacancy for the post of Teacher's</h4>
+    <img src="https://www.indiaeducation.net/imagesvr_ce/838/TEACHER-875.jpg" alt="contact1" style="max-width:100%">
+    <div style="text-align: justify; padding-top: 20px; font-size: 18px;">
+    <ul>
+    <li>Graduate/ Post Graduate</li>
+    <li>NTT/PTT/IMTTI</li>
+    <li>Minimum Experience & Skill Requirements</li>
+    <li>1-2 Years of working experience in classroom Management</li>
+    <li>Knowledge of MS- Office</li>
+    </ul>
+    <p>Apply Here</p>
+    <input type="file" id="real-file1" hidden="hidden"/>
+    <button id="custom-button1" class="btn2 viewmore">Upload Your Resume</button>
+    <!-- <span id="custom-text1"> &nbsp; No File Chosen Yet</span> -->
+  </div>
+</div>
+  <div class="column">
+    <h4 style="font-size: 25px;">Vacancy for the post of Receptionist</h4>
+    <img src="https://www.roberthalf.ca/sites/roberthalf.ca/files/8-skills-to-highlight.jpg" alt="contact2" style="max-width:100%">
+     <div style="text-align: justify; padding-top: 20px; font-size: 18px;">
+     <ul>
+     <li>Graduate/ Post Graduate</li>
+     <li>Minimum Experience & Skill Requirements</li>
+     <li>1-2 Years of working experience in Office Management</li>
+     <li>Knowledge of MS- Office</li>
+     </ul>
+     <input type="file" id="real-file2" hidden="hidden"/>
+     <p>Apply Here</p>
+     <button id="custom-button2" class="btn2 viewmore">Upload Your Resume</button>
+     <!-- <span id="custom-text2"> &nbsp; No File Chosen Yet</span> -->
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="containerimg">
+<div class="row">
+  <div class="column">
+    <h4 style="font-size: 25px;">Vacancy for the post of Attendant</h4>
+    <img src="Images/attendant photo.jpg" alt="contact3" 
+    style="max-width:100%">
+    <div style="text-align: justify; padding-top: 20px; font-size: 18px;">
+    <ul>
+    <li>Matriculation</li>
+    <li>Minimum Experience & Skill Requirements</li>
+    <li>1-2 Years of working experience</li>
+    </ul>
+    <p>Apply Here</p>
+    <input type="file" id="real-file3" hidden="hidden"/>
+    <button id="custom-button3" class="btn2 viewmore">Upload Your Resume</button>
+    <!-- <span id="custom-text3"> &nbsp; No File Chosen Yet</span> -->
+  </div>
+</div>
+  <div class="column">
+    <h4 style="font-size: 25px;">Vacancy for the post of Security Guard</h4>
+    <img src="https://previews.123rf.com/images/andreypopov/andreypopov1608/andreypopov160800823/61416953-confident-young-male-security-guard-standing-arm-crossed.jpg" alt="contact4" 
+    style="max-width:120%">
+     <div style="text-align: justify; padding-top: 20px; font-size: 18px;">
+     <ul>
+     <li>Matriculation</li>
+     <li>Minimum Experience & Skill Requirements</li>
+     <li>1-2 Years of working experience</li>
+     </ul>
+     <p>Apply Here</p>
+     <input type="file" id="real-file4" hidden="hidden"/>
+     <button id="custom-button4" class="btn2 viewmore">Upload Your Resume</button>
+    <!--  <span id="custom-text4"> &nbsp; No File Chosen Yet</span> -->
+    </div>
+  </div>
+</div>
+</div>
+
+ <div class="footer">
+ <h5 style="text-align: center;">Copyright © 2020 Mine Kids Preschool - All Rights Reserved.</h5>
+ </div>
+
+ <!-- <script type="text/javascript">
+  const realFileBtn = document.getElementById("real-file");
+  const customBtn = document.getElementById("custom-button");
+  const customTxt = document.getElementById("custom-text");
+
+  customBtn.addEventListener("click", function(){
+    realFileBtn.click();
+  });
+
+  realFileBtn.addEventListener("change", function(){
+    if(realFileBtn.value){
+      customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+    }
+    else{
+      customTxt.innerHTML = "No File Chosen Yet";
+    }
+  });
+</script> -->
+
+<script type="text/javascript">
+  const realFileBtn1 = document.getElementById("real-file1");
+  const customBtn1 = document.getElementById("custom-button1");
+  const customTxt1 = document.getElementById("custom-text");
+
+  customBtn1.addEventListener("click", function(){
+    realFileBtn1.click();
+  });
+
+  realFileBtn1.addEventListener("change", function(){
+    if(realFileBtn1.value){
+      customTxt1.innerHTML = realFileBtn1.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+    }
+    else{
+      customTxt1.innerHTML = "No File Chosen Yet";
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  const realFileBtn2 = document.getElementById("real-file2");
+  const customBtn2 = document.getElementById("custom-button2");
+  const customTxt2 = document.getElementById("custom-text");
+
+  customBtn2.addEventListener("click", function(){
+    realFileBtn2.click();
+  });
+
+  realFileBtn2.addEventListener("change", function(){
+    if(realFileBtn2.value){
+      customTxt2.innerHTML = realFileBtn2.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+    }
+    else{
+      customTxt2.innerHTML = "No File Chosen Yet";
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  const realFileBtn3 = document.getElementById("real-file3");
+  const customBtn3 = document.getElementById("custom-button3");
+  const customTxt3 = document.getElementById("custom-text");
+
+  customBtn3.addEventListener("click", function(){
+    realFileBtn3.click();
+  });
+
+  realFileBtn3.addEventListener("change", function(){
+    if(realFileBtn3.value){
+      customTxt3.innerHTML = realFileBtn3.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+    }
+    else{
+      customTxt3.innerHTML = "No File Chosen Yet";
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  const realFileBtn4 = document.getElementById("real-file4");
+  const customBtn4 = document.getElementById("custom-button4");
+  const customTxt4 = document.getElementById("custom-text");
+
+  customBtn4.addEventListener("click", function(){
+    realFileBtn4.click();
+  });
+
+  realFileBtn4.addEventListener("change", function(){
+    if(realFileBtn4.value){
+      customTxt4.innerHTML = realFileBtn4.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+    }
+    else{
+      customTxt4.innerHTML = "No File Chosen Yet";
+    }
+  });
+</script>
+
+</body>
+</html>
